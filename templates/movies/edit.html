@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>g33tar's Movie Ratings</h1>
+      <a href="/"><button>Home</button></a>
+      <a href="/movies/"><button>Movies</button></a>
+  </header>
+  <h1>{{title}}</h1>
+  <img src="{{imgUrl}}" alt="{{title}}" class="pgImg">
+
+  <form action="/movies/{{_id}}/update" method = 'POST'>
+    <label for="title">Title</label>
+    <input id='title' type="text" name='title'  value= '{{title}}'>
+
+    <label for="director">Director</label>
+    <input id='director' type="text" name='director'  value= '{{director}}'>
+
+    <label for="year">Year</label>
+    <input id='year' type="text" name='year'  value= '{{year}}'>
+
+    <label for="rating">Rating</label>
+    <input id='rating' type="text" name='rating'  value= '{{rating}}'>
+
+    <label for="url">Image URL</label>
+    <input id='url' type="url" name='imgUrl'  value= '{{imgUrl}}'>
+
+
+    <input type="submit"  value='Update movie'>
+  </form>
+</body>
+</html>

@@ -13,7 +13,7 @@ var server = http.createServer(function (req, res) {
   currentRoute.fn(req, res, currentRoute)
 })
 
-server.listen(8080, function (err) {
-  if (err) console.log('Doah', err)
-  console.log('Woot. A server is running on port 3333')
+server.listen(3333, function (err) {
+  if (err) console.log('SHIT', err)
+  console.log('Waz up on the server port 3333?')
 })

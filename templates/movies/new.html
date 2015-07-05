@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>g33tar's Movie Ratings</h1>
+      <a href="/"><button>Home</button></a>
+      <a href="/movies/"><button>Movies</button></a>
+  </header>
+    <h1>Add a movie!</h1>
+    <form action="/movies/new" method = 'POST'>
+      <label for="title">Title</label>
+      <input id='title' type="text" name='title'  value= ''>
+
+      <label for="director">Director</label>
+      <input id='director' type="text" name='director'  value= ''>
+
+      <label for="year">Year</label>
+      <input id='year' type="text" name='year'  value= ''>
+
+      <label for="rating">Rating</label>
+      <input id='rating' type="text" name='rating'  value= ''>
+
+      <label for="url">Image URL</label>
+      <input id='url' type="url" name='url'  value= ''>
+      <br>
+      <br>
+      <input type="submit"  value='Add movie'>
+    </form>
+</body>
+</html>

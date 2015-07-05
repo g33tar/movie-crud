@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>g33tar's Movie Ratings</h1>
+    <a href="/"><button class="homenav">Home</button></a>
+    <h3>TaDa!! My Great Wisdom!</h3>
+  </header>
+
+  <section class="columns">
+    <div class="column column-one" >
+    <h1>All Movies</h1>
+    <a href="/movies/new"><button>Add a new movie</button></a>
+    </div>
+  </section>
+  <section class="columns headers">
+    <div class="column column-six" >
+        <h5>Title</h5>
+    </div>
+    <div class="column column-four">
+      <h5>Director</h5>
+      <h5>Year</h5>
+    </div>
+    <div class="column column-six">
+      <h5>My Rating</h5>
+    </div>
+    <div class="column column-four">
+    </div>
+    <div class="column column-six"></div>
+  </section>
+
+    <section class="columns">
+      <div class="column column-six" >
+        {{#movies}}
+          <a href="/movies/{{_id}}"><p>{{title}}</p></a>
+        {{/movies}}
+      </div>
+      <div class="empty"></div>
+      <div class="column column-four">
+      {{#movies}}
+        <p>{{director}}</p>
+        <p>{{year}}</p>
+      {{/movies}}
+      </div>
+      <div class="empty"></div>
+      <div class="column column-six">
+        {{#movies}}
+        <p>{{rating}}</p>
+        {{/movies}}
+      </div>
+      <div class="empty"></div>
+      <div class="column column-four">
+        {{#movies}}
+        <form action="/movies/{{_id}}/delete" method ="POST">
+          <input type="submit" value = 'Delete Movie' >
+        </form>
+        <form action="/movies/{{_id}}/edit" method = 'GET'>
+          <input type="submit"  value='Edit'>
+        </form>
+        {{/movies}}
+      </div>
+    <div class="column column-six"></div>
+  </section>
+</body>
+</html>

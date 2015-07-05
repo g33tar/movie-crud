@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>g33tar's Movie Ratings</h1>
+      <a href="/"><button>Home</button></a>
+      <a href="/movies/"><button>Movies</button></a>
+  </header>
+    <h1>{{title}}</h1>
+    {{#movies}}
+    <img src="{{imgUrl}}" alt="title" class="pgImg">
+    <h4>Title: {{title}}</h4>
+    <h4>Director: {{director}}</h4>
+    <h4>Year: {{year}}</h4>
+    <h4>Rating: {{rating}}</h4>
+    {{/movies}}
+
+</body>
+</html>

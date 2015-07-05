@@ -8,17 +8,20 @@
 <body>
   <header>
     <h1>g33tar's Movie Ratings</h1>
-      <a href="/"><button>Home</button></a>
-      <a href="/movies/"><button>Movies</button></a>
+      <a href="/"><button class="homenav">Home</button></a>
+      <a href="/movies/"><button class="homenav">Movies</button></a>
   </header>
+  <section class='column column-two'>
     <h1>{{title}}</h1>
     {{#movies}}
-    <img src="{{imgUrl}}" alt="title" class="pgImg">
+    <img src="{{imgUrl}}" alt="{{title}} poster" class="pgImg">
+    </section>
+    <section class='column column-two show'>
     <h4>Title: {{title}}</h4>
     <h4>Director: {{director}}</h4>
     <h4>Year: {{year}}</h4>
     <h4>Rating: {{rating}}</h4>
     {{/movies}}
-
+  </section>
 </body>
 </html>

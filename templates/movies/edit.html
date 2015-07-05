@@ -8,30 +8,29 @@
 <body>
   <header>
     <h1>g33tar's Movie Ratings</h1>
-      <a href="/"><button>Home</button></a>
-      <a href="/movies/"><button>Movies</button></a>
+      <a href="/"><button  class="homenav">Home</button></a>
+      <a href="/movies/"><button class="homenav">Movies</button></a>
   </header>
-  <h1>{{title}}</h1>
-  <img src="{{imgUrl}}" alt="{{title}}" class="pgImg">
-
-  <form action="/movies/{{_id}}/update" method = 'POST'>
-    <label for="title">Title</label>
-    <input id='title' type="text" name='title'  value= '{{title}}'>
-
-    <label for="director">Director</label>
-    <input id='director' type="text" name='director'  value= '{{director}}'>
-
-    <label for="year">Year</label>
-    <input id='year' type="text" name='year'  value= '{{year}}'>
-
-    <label for="rating">Rating</label>
-    <input id='rating' type="text" name='rating'  value= '{{rating}}'>
-
-    <label for="url">Image URL</label>
-    <input id='url' type="url" name='imgUrl'  value= '{{imgUrl}}'>
-
-
-    <input type="submit"  value='Update movie'>
+  <h1 class='subhead'>{{title}}</h1>
+  <section class='column column-two edit'>
+    <img src="{{imgUrl}}" alt="{{title}}" class="pgImg">
+    </section>
+    <section class='column column-six edit'>
+      <label class='label' for="title">Title</label>
+      <label class='label' for="director">Director</label>
+      <label class='label' for="year">Year</label>
+      <label class='label' for="rating">Rating</label>
+      <label class='label' for="url">Image URL</label>
+      <input class="addNew" type="submit"  value='Update movie'>
+    </section>
+    <section class='column column-three edit'>
+      <form action="/movies/{{_id}}/update" method = 'POST'>
+        <input class='input' id='title' type="text" name='title'  value= '{{title}}'>
+        <input class='input' id='director' type="text" name='director'  value= '{{director}}'>
+        <input class='input' id='year' type="text" name='year'  value= '{{year}}'>
+        <input class='input' id='rating' type="text" name='rating'  value= '{{rating}}'>
+        <input class='input' id='url' type="url" name='imgUrl'  value= '{{imgUrl}}'>
+        </section>
   </form>
 </body>
 </html>

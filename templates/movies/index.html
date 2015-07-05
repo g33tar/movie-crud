@@ -11,60 +11,41 @@
     <a href="/"><button class="homenav">Home</button></a>
     <h3>TaDa!! My Great Wisdom!</h3>
   </header>
-
   <section class="columns">
-    <div class="column column-one" >
-    <h1>All Movies</h1>
-    <a href="/movies/new"><button>Add a new movie</button></a>
-    </div>
+      <a href="/movies/new"><button class="addNew">Add a new movie</button></a>
+      <h1 class='subHeading'>All Movies</h1>
   </section>
-  <section class="columns headers">
-    <div class="column column-six" >
-        <h5>Title</h5>
-    </div>
-    <div class="column column-four">
-      <h5>Director</h5>
-      <h5>Year</h5>
-    </div>
-    <div class="column column-six">
-      <h5>My Rating</h5>
-    </div>
-    <div class="column column-four">
-    </div>
-    <div class="column column-six"></div>
-  </section>
-
-    <section class="columns">
-      <div class="column column-six" >
-        {{#movies}}
-          <a href="/movies/{{_id}}"><p>{{title}}</p></a>
-        {{/movies}}
-      </div>
-      <div class="empty"></div>
-      <div class="column column-four">
+  <section>
+  <table class='indexPg'>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Year</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
       {{#movies}}
-        <p>{{director}}</p>
-        <p>{{year}}</p>
+      <tr class='rows'>
+        <td><b><a href="/movies/{{_id}}">{{title}}</a></b></td>
+        <td>{{director}}</td>
+        <td>{{year}}</td>
+        <td>{{rating}}</td>
+        <td>
+          <form action="/movies/{{_id}}/delete" method ="POST">
+            <input class='indBut' type="submit" value = 'Delete Movie' >
+          </form>
+        </td>
+        <td>
+          <form action="/movies/{{_id}}/edit" method = 'GET'>
+            <input class='indBut'type="submit" class='year' value='Edit'>
+          </form>
+        </td>
+      </tr>
       {{/movies}}
-      </div>
-      <div class="empty"></div>
-      <div class="column column-six">
-        {{#movies}}
-        <p>{{rating}}</p>
-        {{/movies}}
-      </div>
-      <div class="empty"></div>
-      <div class="column column-four">
-        {{#movies}}
-        <form action="/movies/{{_id}}/delete" method ="POST">
-          <input type="submit" value = 'Delete Movie' >
-        </form>
-        <form action="/movies/{{_id}}/edit" method = 'GET'>
-          <input type="submit"  value='Edit'>
-        </form>
-        {{/movies}}
-      </div>
-    <div class="column column-six"></div>
+    </tbody>
+  </table>
   </section>
 </body>
 </html>

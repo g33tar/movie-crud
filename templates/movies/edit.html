@@ -21,7 +21,6 @@
       <label class='label' for="year">Year</label>
       <label class='label' for="rating">Rating</label>
       <label class='label' for="url">Image URL</label>
-      <input class="addNew" type="submit"  value='Update movie'>
     </section>
     <section class='column column-three edit'>
       <form action="/movies/{{_id}}/update" method = 'POST'>
@@ -30,7 +29,8 @@
         <input class='input' id='year' type="text" name='year'  value= '{{year}}'>
         <input class='input' id='rating' type="text" name='rating'  value= '{{rating}}'>
         <input class='input' id='url' type="url" name='imgUrl'  value= '{{imgUrl}}'>
-        </section>
-  </form>
+        <input class="addNew" type="submit"  value='Update movie'>
+      </form>
+    </section>
 </body>
 </html>

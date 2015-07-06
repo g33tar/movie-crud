@@ -206,6 +206,9 @@ a:hover {
 .column.column-three.edit{
   margin-top: 150px;
 }
+.column.column-three.edit .addNew{
+  margin-right: 550px;
+}
 .column.column-two.edit .pgImg{
   width: 45%;
   margin-left: 200px;
